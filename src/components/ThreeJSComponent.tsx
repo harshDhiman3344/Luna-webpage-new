@@ -27,9 +27,9 @@ const ThreeJSComponent = () => {
     camera.position.z = 5;
 
     const scene = new THREE.Scene();
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.01;
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.enableDamping = true;
+    // controls.dampingFactor = 0.01;
 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
     directionalLight.position.set(0, 1, 0.25).normalize();
@@ -82,7 +82,7 @@ const ThreeJSComponent = () => {
       }
 
       renderer.render(scene, camera);
-      controls.update();
+      // controls.update();
     };
 
     animate();
